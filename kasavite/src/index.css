@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+.primary {
+    color : #FF6060;
+}
+
+.primary-background {
+    background-color: #FF6060;
+}
+
+.secondary {
+    background-color: #F6F6F6;
+}
+
+.secondary-background {
+    background-color: #F6F6F6;
+}

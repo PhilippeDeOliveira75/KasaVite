@@ -1,0 +1,39 @@
+.row-about-banner{
+    display : flex;
+    flex-direction: column;
+    justify-content : center;
+    align-items: center;
+    margin : 40px 100px 0px 100px;
+    height: 223px;
+}
+
+.img-about-banner{
+    background-image: url('../../assets/AboutDesktopBanner.webp');
+    background-size: cover;
+    background-position: center;
+    height: 223px;
+    width: 100%;
+    border-radius : 20px;
+    filter: brightness(70%);
+}
+
+.row-collapse{
+    margin: 50px 220px;
+}
+
+
+@media(width < 768px){
+
+    .row-about-banner{
+        margin : 20px 20px;
+    }
+
+    .row-collapse{
+        margin: 20px 20px;
+    }
+
+    .img-about-banner{
+        background-image: url('../../assets/AboutMobileBanner.webp');
+        height: 223px;
+    }
+}

@@ -1,0 +1,47 @@
+.w-collapseTitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 0 20px;
+    border-radius: 5px;
+    height: 50px;
+}
+
+.w-collapseTitle:hover{
+    cursor: pointer;
+}
+
+.collapseTitle{
+    color: white;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.w-paragraph {
+    border-radius: 0px 0px 5px 5px;
+    height: 0px;
+    width: 100%;
+    overflow: hidden;
+    transition: height ease 0.5s;
+    margin-bottom: 30px;
+}
+
+.toggleParagraph{
+    margin: 30px 20px 20px 20px;
+    font-size: 24px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    line-height: 30px;
+}
+
+@media(width < 768px){
+
+    .collapseTitle{
+        font-size: 13px;
+    }
+
+    .toggleParagraph{
+        font-size: 12px;
+    }
+}

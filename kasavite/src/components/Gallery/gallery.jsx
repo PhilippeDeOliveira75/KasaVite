@@ -45,11 +45,12 @@ function Gallery(props) {
                         <img className='imgChevron' src={chevronRight} alt="Chevron right" />
                     </div> 
                 </div>
-                </>
-                ) : null}
-            </div>
+
             <div className='number'>
                 {index+1 + " / " + pictureList}
+            </div>
+            </>
+                ) : null}
             </div>
          </div>
       );

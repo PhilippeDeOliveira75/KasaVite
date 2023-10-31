@@ -18,7 +18,6 @@ function About() {
 			}
 		})
 		.then(function(res){
-			console.log(res);
 			setAboutInfos(res);
 		})
 		.catch(function(err){

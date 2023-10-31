@@ -20,7 +20,6 @@ function Home() {
 			}
 		})
 		.then(function(res){
-			console.log(res);
 			setLodgings(res);
 		})
 		.catch(function(err){

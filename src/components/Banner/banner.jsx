@@ -1,4 +1,4 @@
-import './Banner.scss'
+import './banner.scss'
 
 import { HomeBanner } from '@assets/import'
 

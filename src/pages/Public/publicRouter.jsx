@@ -1,7 +1,6 @@
-import React from 'react'
+import { Home, Lodging, About, Error, PublicLayout } from '@pages/Public/import.js'
+
 import { Routes, Route } from 'react-router-dom'
-import { Home, Product, PublicLayout } from '@pages/Public/import.js'
-import { Error } from '@utils/import.js'
 
 function PublicRouter () {
 
@@ -12,7 +11,8 @@ function PublicRouter () {
             <Route element={<PublicLayout />} >
 
                 <Route path="/" element={<Home />} />
-                <Route path='/product/' element={<Product />} />
+                <Route path='/lodging/:id' element={<Lodging />} />
+                <Route path='/about' element={<About />} />
 
 
             </Route>

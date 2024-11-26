@@ -1,2 +1,8 @@
 export { default as Header } from '@components/Header/header.jsx'
 export { default as Footer } from '@components/Footer/footer.jsx'
+export { default as RentalInfo } from '@components/RentalInfo/rentalinfo.jsx'
+export { default as RateStar } from '@components/RateStar/ratestar.jsx'
+export { default as Collapse } from '@components/Collapse/collapse.jsx'
+export { default as Gallery } from '@components/Gallery/gallery.jsx'
+export { default as Banner } from '@components/Banner/banner.jsx'
+export { default as Card } from '@components/Card/card.jsx'

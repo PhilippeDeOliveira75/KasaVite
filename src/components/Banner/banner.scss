@@ -1,0 +1,44 @@
+.row-home-banner{
+    display : flex;
+    flex-direction: column;
+    justify-content : center;
+    align-items: center;
+    margin : 40px 100px 0px 100px;
+}
+
+.img-home-banner{
+    width: 100%;
+    border-radius : 10px;
+    filter: brightness(70%);
+}
+
+.title-home-banner{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    font-family: Montserrat;
+    font-weight : 500;
+    font-size: 44px;
+}
+
+@media(width < 768px){
+    
+    .row-home-banner{
+        margin : 20px 20px;
+        align-items: normal
+    }
+
+    .img-home-banner{
+        height: 111px;
+        object-fit: cover;
+    }
+
+    .title-home-banner{
+        font-size: 24px;
+        padding: 0px 10px;
+    }
+    
+}

@@ -1,0 +1,13 @@
+.rateStar > img{
+    width: 30px;
+    height: 30px;
+    gap: 7px;
+}
+
+@media(width < 768px){
+
+    .rateStar > img{
+        width: 15px;
+        height: 15px;
+    }
+}

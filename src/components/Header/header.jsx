@@ -1,18 +1,42 @@
-import './header.scss'
-
+import './header.scss';
+import { NavLink } from "react-router-dom";
+import { Logo } from '@assets/import.js';
 
 function Header() {
 
+	return (
 
-  return (
+		<header>
 
-    <header>
+			<div className='row-header'>
 
-      <p>Je suis le Header</p>
+				<NavLink to="/">
 
-    </header>
+					<img src={ Logo } alt='logo_kasa' className='logo-kasa' />
 
-  )
+				</NavLink>
+
+				<nav>
+
+					<ul className='w-nav'>
+
+						<li>
+							<NavLink to="/" className="nav-btn primary">Accueil</NavLink>
+						</li>
+
+						<li>
+							<NavLink to="/about" className="nav-btn primary">À Propos</NavLink>
+						</li>
+
+					</ul>
+
+				</nav>
+
+			</div>
+
+		</header>
+
+	)
 
 }
 

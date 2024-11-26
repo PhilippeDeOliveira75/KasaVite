@@ -1,50 +1,57 @@
-.row-header{
-    margin : 40px 100px 0px 100px;
-    display : flex;
-    justify-content : space-between;
-    align-items : center;
-    height : 68px;
+.header {
 
-    .w-nav {
+    .header__row {
+        width: 100%;
         display: flex;
-        gap: 60px;
-        list-style-type:none
-    }
+        justify-content: space-between;
+        align-items: center;
+        margin: 40px 0px;
 
-    .nav-btn {
-        text-decoration : none;
-        font-family: 'Montserrat';
-        font-weight: 500;
-        font-size: 24px;
-        color: var(--primary-color);
-    }
+        .header__nav {
 
-    .active{
-        text-decoration: underline;
-    }
+            .header__nav-list {
+                display: flex;
+                gap: 40px;
 
-    .nav-btn:hover {
-        text-decoration : underline;
+                .header__nav-item {
+                    text-decoration: none;
+                    font-weight: 500;
+                    font-size: 24px;
+                    color: var(--primary-color);
+            
+                    &:hover {
+                        text-decoration: underline;
+                    }
+            
+                    &.active {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        } 
     }
-
 }
 
-@media(width < 768px){
-    .row-header{
-        margin : 20px 20px 0px 20px;
-        height : 43px;
-    }
+@media (max-width: 768px) {
+    .header {
 
-    .logo-kasa{
-        height : 40px;
-    }
+        .header__row {
 
-    .w-nav {
-        gap: 20px;
-    }
+            .header__logo {
+                width: 60%;
+            }
+    
+            .header__nav {
+    
+                .header__nav-list {
 
-    .nav-btn {
-        font-size: 12px;
-        text-transform: uppercase;
+                    .header__nav-item {
+                        font-size: 20px;
+                
+                    }
+
+                }
+            }
+        }
     }
 }

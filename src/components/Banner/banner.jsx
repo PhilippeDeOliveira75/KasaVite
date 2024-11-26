@@ -8,10 +8,11 @@ function Banner () {
     
     return (
 
-        <div className='row-home-banner'>
-            <img src={ HomeBanner } alt='Paysage_de_récifs' className='img-home-banner' />
-            <h1 className='title-home-banner'>{title}</h1>
-        </div>
+    <div className="home-banner__row">
+        <img src={HomeBanner} alt="Vue panoramique sur des falaises" className="home-banner__image" />
+        <h1 className="home-banner__title">{title}</h1>
+    </div>
+
 
     )
 

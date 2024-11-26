@@ -1,0 +1,15 @@
+.layout {
+
+    .main-content {
+        padding: 0px 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .layout {
+
+        .main-content {
+            padding: 0px 20px;
+        }
+    }
+}

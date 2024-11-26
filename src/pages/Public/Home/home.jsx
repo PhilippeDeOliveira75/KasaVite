@@ -27,22 +27,19 @@ function Home() {
 
 	return (
 		
-		<div>
-
-			<Banner />
-			<div className='row-cards secondary-background'>
-            	<div className='w-cards'>
+		<div className='home__content'>
+	
+            <div className='cards__w'>
 				{ lodgings && lodgings.length > 0 && lodgings.map((item, i) =>
-				<Card
-					key={i}
-					id={item.id}
-					title={item.title}
-					cover={item.cover}
-				/>
-			)}
-				</div>
+					<Card
+						key={i}
+						id={item.id}
+						title={item.title}
+						cover={item.cover}
+					/>
+				)}
 			</div>
-
+			
 		</div>
 
 	)

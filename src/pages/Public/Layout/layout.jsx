@@ -1,28 +1,41 @@
 import './layout.scss'
-import { Outlet } from 'react-router'
-import { Header, Footer } from '@components/import.js'
 
+import { Outlet, useLocation } from 'react-router'
 
-function PublicLayout  ()  {
+import { Header, Footer, Banner } from '@components/import.js'
 
-    return (
+import { HomeBanner, AboutBanner } from '@assets/import'
 
-        <div className='layout'>
+function PublicLayout() {
 
-             <div className="main-content">
+  const location = useLocation()
 
-                <Header />
+  
+  const bannerConfig = {
+    '/': {
+      imageSrc: HomeBanner,
+      title: 'Chez vous, partout et ailleurs',
+    },
+    '/about': {
+      imageSrc: AboutBanner,
+      title: 'À propos de nous',
+    },
+  }
 
-                <Outlet />
+  const currentBanner = bannerConfig[location.pathname] || null;
 
-            </div>
-
-            <Footer />
-
-        </div>
-
-    )
-
+  return (
+    <div className="layout">
+      <div className="main-content">
+        <Header />
+        {currentBanner && (
+          <Banner imageSrc={currentBanner.imageSrc} title={currentBanner.title} />
+        )}
+        <Outlet />
+      </div>
+      <Footer />
+    </div>
+  )
 }
 
 export default PublicLayout

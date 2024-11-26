@@ -9,10 +9,10 @@ function Card ({id, title, cover}) {
         <article>
             <NavLink to={'/lodging/' + id} className='card' data-id={id}>
                 <div>
-                    <img className='card-img' src={cover} alt={`${title} cover`}></img>
+                    <img className='card__img' src={cover} alt={`${title} cover`}></img>
                 </div>
-                <div className='w-card-title'>
-                    <h2 className='card-title'>{title}</h2>
+                <div className='card__w-title'>
+                    <h2 className='card__title'>{title}</h2>
                 </div>
             </NavLink>
         </article>

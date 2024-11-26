@@ -1,7 +1,12 @@
-@media(width < 768px){
+.home__content {
+    width: 100%;
 
-    .row-cards{
-        margin : 20px 20px;
+        .cards__w {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
     }
 
-}

@@ -1,20 +1,15 @@
-import './banner.scss'
+import './banner.scss';
 
-import { HomeBanner } from '@assets/import'
+function Banner({ imageSrc, title }) {
 
-function Banner () {
-
-    const title = 'Chez vous, partout et ailleurs'
-    
-    return (
+  return (
 
     <div className="home-banner__row">
-        <img src={HomeBanner} alt="Vue panoramique sur des falaises" className="home-banner__image" />
-        <h1 className="home-banner__title">{title}</h1>
+      <img src={imageSrc} alt="Bannière" className="home-banner__image" />
+      <h1 className="home-banner__title">{title}</h1>
     </div>
 
-
-    )
+  )
 
 }
 

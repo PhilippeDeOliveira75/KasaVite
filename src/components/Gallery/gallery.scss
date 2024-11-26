@@ -2,11 +2,12 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    margin-bottom: 40px;
 }
 
 .w-carousel {
     border-radius: 25px;
-    margin: 20px 100px 0px 100px;
+
     padding: 0;
     overflow: hidden;
     position: relative;

@@ -1,7 +1,5 @@
 import './about.scss'
-
 import { Collapse } from '@components/import'
-
 import { useState, useEffect } from "react"
 
 
@@ -13,12 +11,12 @@ function About() {
 		fetch("about.json")
 		.then(function(res){
 			if(res.ok){
-				return res.json();
+				return res.json()
 			}
 		})
 		.then(function(res){
-			console.log(res);
-			setAboutInfos(res);
+			console.log(res)
+			setAboutInfos(res)
 		})
 		.catch(function(err){
 			console.log(err)
@@ -27,15 +25,9 @@ function About() {
 
 	
 	return (
-		
-		<div>
-			
-			<div className='row-about-banner'>
-				<div className='img-about-banner'>
-				</div>
-        	</div>
 
-			<div className='row-collapse'>
+			<div>
+
                 {aboutInfos.map((infos, index) => (
                     <Collapse
                         key={`${infos.title}-${index}`}
@@ -43,9 +35,8 @@ function About() {
                         texte={infos.texte}
                     />
                 ))}
+
             </div>
-			
-		</div>
 
 	)
 

@@ -1,30 +1,53 @@
 import './header.scss'
+import { useState } from 'react';
+import { GiHamburgerMenu } from "react-icons/gi";
+import { NavLink } from "react-router-dom";
+import { Logo } from '@assets/import.js';
+import { Modal } from '@components/import'; 
 
-import { NavLink } from "react-router-dom"
-import { Logo } from '@assets/import.js'
+function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
 
-function Header () {
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
-    return (
-        <header className="header">
-            <div className="header__row">
-                <NavLink to="/">
-                    <img src={Logo} alt="logo_kasa" className="header__logo" />
-                </NavLink>
+  const navLinks = [
+    { to: '/', label: 'Accueil' },
+    { to: '/about', label: 'À Propos' },
+  ];
 
-                <nav className="header__nav">
-                    <ul className="header__nav-list">
-                        <li className="header__nav-item">
-                            <NavLink to="/" >Accueil</NavLink>
-                        </li>
-                        <li className="header__nav-item">
-                            <NavLink to="/about">À Propos</NavLink>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-    )
+  return (
+    <header className="header">
+      <div className="header__row">
+        <NavLink to="/" className="header__logo">
+          <img src={Logo} alt="logo_kasa" />
+        </NavLink>
+
+        <nav className="header__nav">
+          <GiHamburgerMenu className="header__burger-icon" onClick={toggleMenu} />
+
+          <ul className="header__nav-list">
+            {navLinks.map(({ to, label }) => (
+              <li key={to} className="header__nav-item">
+                <NavLink to={to}>{label}</NavLink>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+ 
+      <Modal isOpen={menuOpen} onClose={toggleMenu}>
+        <ul className="modal__nav-list">
+          {navLinks.map(({ to, label }) => (
+            <li key={to} className="modal__nav-item">
+              <NavLink to={to} onClick={toggleMenu}>{label}</NavLink>
+            </li>
+          ))}
+        </ul>
+      </Modal>
+    </header>
+  );
 }
 
-export default Header
+export default Header;

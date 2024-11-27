@@ -1,0 +1,9 @@
+# Autoriser tous les robots à explorer tout le site
+User-agent: *
+Disallow:
+
+# Bloquer un répertoire spécifique (exemple : /admin)
+# Disallow: /admin/
+
+# Bloquer tous les robots de crawler un répertoire particulier
+# Disallow: /private/

@@ -1,167 +1,67 @@
-
-
-.w-title-tags-host-rating{
+.rental-info__container {
     display: flex;
+    justify-content: space-between;
     margin-bottom: 40px;
-}
 
-.row-title-tags{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    flex-direction: column;
-    gap: 15px;
-}
+    .rental-info__title-tags {
 
-.w-title{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 5px;
-}
+        .rental-info__title-wrapper {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            
+            .rental-info__title {
+                font-family: 'Montserrat';
+                font-size: 36px;
+                font-weight: 500;
+            }
 
-.lodging-title{
-    font-family: 'Montserrat';
-    font-weight: 500;
-    font-size: 36px;
-    color: var(--primary-color);
-}
+            .rental-info__location {
+                font-family: 'Montserrat';
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
 
-.lodging-location{
-    font-family: 'Montserrat';
-    font-weight: 500;
-    font-size: 18px;
-    color: var(--primary-color);
-}
-
-.w-tags{
-    display: flex;
-}
-
-.tagsList{
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    
-}
-
-.tags{
-    font-family: 'Montserrat';
-    font-weight: 500;
-    font-size: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px 15px;
-    border-radius: 10px;
-    min-width: 115px;
-    background-color: var(--primary-color);
-    color: var(--secondary-color)
-}
-
-.row-host-rating{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.w-host{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
-}
-
-.host-name{
-    width : min-content;
-    text-align: right
-}
-
-.host-name{
-    font-family: 'Montserrat';
-    font-weight: 500;
-    font-size: 18px;
-    color: var(--primary-color);
-}
-
-.host-picture{
-    width: 64px;
-    height: 64px;
-    border-radius: 100%;
-    object-fit: cover;
-}
-
-.w-rating{
-    gap: 10px;
-}
-
-.row-description-facilities{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 96px;
-    margin-bottom: 40px;
-}
-
-.w-description{
-    flex: 1;
-}
-
-.w-facilities{
-    list-style-type: none;
-    padding: 0;
-    flex: 1;
-}
-
-@media(width < 768px){
-
-    .row-rentalinfo{
-        margin: 20px 20px;
+        .rental-info__tags-wrapper {
+            display: flex;
+            gap: 20px;
+                
+            .rental-info__tags {
+                font-family: 'Montserrat';
+                font-size: 16px;
+                font-weight: 500;
+                padding: 5px 15px;
+                border-radius: 10px;
+                background-color: var(--primary-color);
+                color: var(--secondary-color)
+            }
+        }
     }
 
-    .w-title-tags-host-rating{
+    .rental-info__host-rating {
+        display: flex;
         flex-direction: column;
-    }
-    
-    .lodging-title{
-        font-size: 18px;
-    }
+        justify-content: space-around;
 
-    .lodging-location{
-        font-size: 14px;
-    }
+        .rental-info__host-wrapper {
+            display: flex;
+            justify-content: space-between;
 
-    .tags{
-        font-size: 10px;
-    }
+            .rental-info__host-name {
+                width : min-content;
+                text-align: right;
+                font-family: 'Montserrat';
+                font-weight: 500;
+                font-size: 18px;
+                color: var(--primary-color);
+            }
 
-    .row-host-rating{
-        flex-direction: row-reverse;
-        align-items: center;
-        margin-top: 10px;
-    }
-
-    .host-name{
-        font-size: 12px;
-    }
-
-    .host-picture{
-        width: 32px;
-        height: 32px;
-    }
-    .row-description-facilities{
-        flex-direction: column;
-        gap: 0px;
-    }
-
-    .collapseTitle{
-        font-size: 18px;
-    }
-
-    .toggleParagraph{
-        font-size: 18px;
+            .rental-info__host-picture {
+                width: 64px;
+                height: 64px;
+                border-radius: 100%;
+                object-fit: cover;
+            }
+        }
     }
 }

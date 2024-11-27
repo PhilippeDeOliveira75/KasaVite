@@ -1,55 +1,59 @@
-.w-collapseTitle {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px 0 20px;
-    border-radius: 5px;
-    height: 50px;
-    background-color: var(--primary-color);
-    transition: border-radius 0.3s ease;
+.collapse__container {
+
+    .collapse__title-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px 0 20px;
+        border-radius: 5px;
+        height: 50px;
+        background-color: var(--primary-color);
+        transition: border-radius 0.3s ease;
+
+        .collapse__title {
+            color: var(--secondary-color);
+            font-family: 'Montserrat';
+            font-weight: 500;
+            font-size: 24px;
+        }
+    }
+
+    .collapse__title-wrapper.open {
+        border-radius: 5px 5px 0px 0px;
+    }
+
+    .collapse__title-wrapper:hover {
+        cursor: pointer;
+    }
+
+    .collapse__text-wrapper {
+        border-radius: 0px 0px 5px 5px;
+        overflow: hidden;
+        transition: height ease 0.3s;
+        margin-bottom: 40px;
+        background-color: var(--primary-color);
+        filter: brightness(1.5);
+
+        .collapse__text {
+            padding: 20px;
+            font-size: 24px;
+            font-family: 'Montserrat';
+            font-weight: 400;
+            color: var(--secondary-color);
+        }
+    }
+    
+
 }
 
-.w-collapseTitle.open {
-    border-radius: 5px 5px 0px 0px;
-}
-
-.w-collapseTitle:hover {
-    cursor: pointer;
-}
-
-.collapseTitle {
-    color: var(--secondary-color);
-    font-family: 'Montserrat';
-    font-weight: 500;
-    font-size: 24px;
-}
-
-.w-paragraph {
-    border-radius: 0px 0px 5px 5px;
-    height: 0px;
-    width: 100%;
-    overflow: hidden;
-    transition: height ease 0.3s;
-    margin-bottom: 30px;
-    background-color: var(--primary-color);
-    filter: brightness(1.5)
-}
-
-.toggleParagraph {
-    margin: 30px 20px 20px 20px;
-    font-size: 24px;
-    font-family: 'Montserrat';
-    font-weight: 400;
-    line-height: 30px;
-    color: var(--secondary-color);
-}
 
 @media (max-width: 768px) {
-    .collapseTitle {
+    
+    .collapse__title {
         font-size: 13px;
     }
 
-    .toggleParagraph {
+    .collapse__text {
         font-size: 12px;
     }
 }

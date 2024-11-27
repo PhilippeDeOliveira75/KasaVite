@@ -1,57 +1,83 @@
-import './lodging.scss';
+import './lodging.scss'
 
-import { Gallery, RentalInfo } from '@components/import';
+import { Gallery, RentalInfo, Collapse } from '@components/import'
 
-import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react"
+import { useParams, useNavigate } from "react-router-dom"
 
-function Lodging() {
-    
-    const { id } = useParams();
-    const navigate = useNavigate();
-    const [lodging, setLodging] = useState(null);
+function Lodging () {
+
+    const { id } = useParams()
+    const navigate = useNavigate()
+    const [lodging, setLodging] = useState(null)
 
     useEffect(() => {
         fetch("/lodgings.json")
             .then((res) => {
                 if (!res.ok) {
-                    throw new Error(`HTTP error! Status: ${res.status}`);
+                    throw new Error(`HTTP error! Status: ${res.status}`)
                 }
-                return res.json();
+                return res.json()
             })
             .then((data) => {
-                const found = data.find((item) => item.id === id);
+                const found = data.find((item) => item.id === id)
                 if (!found) {
-                    navigate("/404");
+                    navigate("/404")
                 } else {
-                    setLodging(found);
+                    setLodging(found)
                 }
             })
             .catch((err) => {
-                console.error("Erreur lors du chargement des données:", err);
-                navigate("/404");
-            });
-    }, [id, navigate]);
+                console.error("Erreur lors du chargement des données:", err)
+                navigate("/404")
+            })
+    }, [id, navigate])
 
     return (
+
         <div>
+
             {lodging && (
+
                 <div>
+
                     <Gallery pictures={lodging.pictures} />
+
                     <RentalInfo
                         title={lodging.title}
                         location={lodging.location}
                         hostname={lodging.host.name}
                         hostpicture={lodging.host.picture}
                         tags={lodging.tags}
-                        description={lodging.description}
-                        equipments={lodging.equipments}
                         rating={lodging.rating}
                     />
+
+                    <div>
+                        <Collapse
+                            title="Description"
+                            texte={lodging.description}
+                        />
+                        <Collapse
+                            title="Équipements"
+                            texte={
+                                <ul>
+                                    {lodging.equipments.map((equipment, index) => (
+                                        <li key={index}>{equipment}</li>
+                                    ))}
+                                </ul>
+                            }
+                        />
+
+                    </div>
+
                 </div>
+
             )}
+
         </div>
-    );
+
+    )
+
 }
 
-export default Lodging;
+export default Lodging

@@ -1,6 +1,6 @@
-import './banner.scss';
+import './banner.scss'
 
-function Banner({ imageSrc, title }) {
+function Banner ({ imageSrc, title }) {
 
   return (
 

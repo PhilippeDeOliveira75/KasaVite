@@ -42,18 +42,17 @@
             color: var(--secondary-color);
         }
     }
-    
 
 }
 
-
 @media (max-width: 768px) {
-    
-    .collapse__title {
-        font-size: 13px;
+
+    .collapse__container .collapse__title-wrapper .collapse__title {
+        font-size: 16px;
     }
 
-    .collapse__text {
-        font-size: 12px;
+    .collapse__container .collapse__text-wrapper .collapse__text {
+        font-size: 14px;
     }
+
 }

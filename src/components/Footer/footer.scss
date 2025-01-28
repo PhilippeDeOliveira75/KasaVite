@@ -21,3 +21,15 @@
         }
     }
 }
+
+@media (max-width: 576px) {
+    
+    .w-footer img {
+        width: 100px;
+    }
+    
+    .row-footer .w-footer .text-footer {
+        font-size: 16px;
+    }
+    
+}

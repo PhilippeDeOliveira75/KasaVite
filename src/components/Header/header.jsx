@@ -1,9 +1,9 @@
 import './header.scss'
 import { useState } from 'react';
-import { GiHamburgerMenu } from "react-icons/gi";
-import { NavLink } from "react-router-dom";
-import { Logo } from '@assets/import.js';
-import { Modal } from '@components/import'; 
+import { GiHamburgerMenu } from "react-icons/gi"
+import { NavLink } from "react-router-dom"
+import { Logo } from '@assets/import.js'
+import { Modal } from '@components/import';
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);

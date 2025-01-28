@@ -42,6 +42,11 @@
     .card {
       height: 255px;
 
+      .card__title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
     }
   }
   

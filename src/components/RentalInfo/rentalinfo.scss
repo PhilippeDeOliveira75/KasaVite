@@ -1,11 +1,17 @@
 .rental-info__container {
-    display: flex;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 1fr; 
     justify-content: space-between;
     margin-bottom: 40px;
 
     .rental-info__title-tags {
+        display: grid;
+        grid-template-columns: 2fr;
 
         .rental-info__title-wrapper {
+            display: flex;
+            flex-direction: column;
             color: var(--primary-color);
             margin-bottom: 20px;
             
@@ -24,6 +30,7 @@
 
         .rental-info__tags-wrapper {
             display: flex;
+            flex-wrap: wrap;
             gap: 20px;
                 
             .rental-info__tags {
@@ -33,19 +40,19 @@
                 padding: 5px 15px;
                 border-radius: 10px;
                 background-color: var(--primary-color);
-                color: var(--secondary-color)
+                color: var(--secondary-color);
             }
         }
     }
 
     .rental-info__host-rating {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: end;
 
         .rental-info__host-wrapper {
             display: flex;
-            justify-content: space-between;
+            gap: 20px;
 
             .rental-info__host-name {
                 width : min-content;
@@ -65,3 +72,65 @@
         }
     }
 }
+
+
+@media (max-width: 768px) {
+    .rental-info__container {
+        grid-template-columns: 1fr; 
+        gap: 40px;
+
+        .rental-info__title-tags {
+            grid-template-columns: 1fr;
+            
+            .rental-info__title-wrapper {
+                gap: 10px;
+
+                .rental-info__title {
+                    font-size: 26px;
+                }
+                
+                .rental-info__location {
+                    font-size: 20px;
+                }
+            }
+        }
+        
+        .rental-info__host-rating {
+            grid-template-columns: 1fr;
+            justify-items: start;
+            gap: 20px;
+
+            .rental-info__host-wrapper {
+                display: flex;
+                flex-direction: row-reverse;
+                gap: 20px;
+
+                .rental-info__host-name {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+
+    .rental-info__container {
+
+        .rental-info__title-tags {
+
+            .rental-info__title-wrapper {
+
+                .rental-info__title {
+                    font-size: 20px;
+                }
+
+                .rental-info__location {
+                    font-size: 14px;
+                }     
+            }
+        }
+    } 
+}
+    
+    
+

@@ -15,6 +15,7 @@ function Header() {
   const navLinks = [
     { to: '/', label: 'Accueil' },
     { to: '/about', label: 'À Propos' },
+    { to: '/longin', label: 'Se connecter' }
   ];
 
   return (
